@@ -1,0 +1,389 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="dalca_full">
+    <physics type='ode'>
+      <max_step_size>0.0005</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>2000</real_time_update_rate>
+      <max_contacts>10</max_contacts>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+           <sor>1.3</sor>
+           <thread_position_correction>false</thread_position_correction>
+        </solver>
+        <constraints>
+          <cfm>0.00010</cfm>
+          <erp>0.3</erp>
+          <contact_max_correcting_velocity>0.01</contact_max_correcting_velocity>
+          <!-- <contact_surface_layer>0.001</contact_surface_layer> -->
+        </constraints>
+      </ode>
+    </physics>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>model://dalca_empty</uri>
+    </include>
+    <model name="estante_01">
+          <include>
+              <uri>model://estante_longa</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">0.000095 0.355187 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_02">
+          <include>
+              <uri>model://estante_longa</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-1.5692 0.35519 0.001 0 0 0</pose>
+    </model>
+    <model name="container_robotico_01">
+          <include>
+              <uri>model://container_robotico</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">2.4944 2.1962 0.001 0 0 0</pose>
+    </model>
+    <model name="container_robotico_02">
+          <include>
+              <uri>model://container_robotico</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">2.4944 6.5147 0.001 0 0 0</pose>
+    </model>
+    <model name="mesa_01">
+          <include>
+              <uri>model://mesa</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">0.306017 -3.92759 0.001 0 0 0</pose>
+    </model>
+    <model name="mesa_02">
+          <include>
+              <uri>model://mesa</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-1.77308 -3.92759 0.001 0 0 0</pose>
+    </model>
+    <model name="mesa_03">
+          <include>
+              <uri>model://mesa</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-3.91262 -3.92759 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_curta_01">
+          <include>
+              <uri>model://estante_curta</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">0.68674 -5.1897 0.001 0 0 0</pose>
+    </model>
+    <model name="totem_01">
+          <include>
+              <uri>model://totem_controle</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-3.8037 -5.9901 0.001 0 0 0</pose>
+    </model>
+    <model name="caminhao_01">
+          <include>
+              <uri>model://caminhao</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-15.111 -4.1169 0.001 0 0 0</pose>
+    </model>
+    <model name="grade_01">
+          <include>
+              <uri>model://grade_piso</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">16.908 -0.17638 0.001 0 0 0</pose>
+    </model>
+    <model name="grade_02">
+          <include>
+              <uri>model://grade_piso</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">16.907 2.6215 0.001 0 0 0</pose>
+    </model>
+    <model name="rolos_01">
+          <include>
+              <uri>model://rolos_metal</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">16.707 -4.1191 0.001 0 0 0</pose>
+    </model>
+    <model name="maquina_01">
+          <include>
+              <uri>model://maquina_2</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">17.303 -8.6028 0.001 0 0 0</pose>
+    </model>
+    <model name="maquina_02">
+          <include>
+              <uri>model://maquina_1</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-9.1969 7.709 0.001 0 0 -3.135955</pose>
+    </model>
+    <model name="maquina_03">
+          <include>
+              <uri>model://maquina_1</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-9.2474 9.5009 0.001 0 0 0</pose>
+    </model>
+    <model name="maquina_04">
+          <include>
+              <uri>model://maquina_2</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">17.303 -11.449 0.001 0 0 0</pose>
+    </model>
+    <model name="braco_01">
+          <include>
+              <uri>model://braco_robotico</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-4.8421 -5.4408 0.001 0 0 0</pose>
+    </model>
+    <model name="braco_02">
+          <include>
+              <uri>model://braco_robotico</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-5.8505 -5.4408 0.001 0 0 0</pose>
+    </model>
+    <model name="empilhadeira_01">
+          <include>
+              <uri>model://empilhadeira</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-17.001 13.901 0.001 0 0 0</pose>
+    </model>
+    <model name="empilhadeira_02">
+          <include>
+              <uri>model://empilhadeira</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-16.312 16.346 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_quadrada_01">
+          <include>
+              <uri>model://estante_quadrada</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-3.1928 18.265 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_quadrada_02">
+          <include>
+              <uri>model://estante_quadrada</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-1.6178 18.265 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_quadrada_03">
+          <include>
+              <uri>model://estante_quadrada</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-0.000235 18.265 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_quadrada_04">
+          <include>
+              <uri>model://estante_quadrada</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">1.5758 18.265 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_quadrada_05">
+          <include>
+              <uri>model://estante_quadrada</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">3.1964 18.265 0.001 0 0 0</pose>
+    </model>
+    <model name="estante_quadrada_06">
+          <include>
+              <uri>model://estante_quadrada</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">4.7725 18.265 0.001 0 0 0</pose>
+    </model>
+    <model name="trilho_01">
+          <include>
+              <uri>model://trilho</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">10.44 13.705 0.001 0 0 0</pose>
+    </model>
+    <model name="caixa_01">
+          <include>
+              <uri>model://caixa</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">18.068 9.4893 0.1301 0 0 0</pose>
+    </model>
+    <model name="caixa_aberta_01">
+          <include>
+              <uri>model://caixa_aberta</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">18.171 10.517 0.1301 0 0 0</pose>
+    </model>
+    <model name="caixas_01">
+          <include>
+              <uri>model://caixas</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">19.114 10.02 0.15 0 0 0</pose>
+    </model>
+    <model name="caixas_02">
+          <include>
+              <uri>model://caixas</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">19.114 8.6396 0.15 0 0 0</pose>
+    </model>
+    <model name="caixas_03">
+          <include>
+              <uri>model://caixas</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">19.114 7.1149 0.15 0 0 0</pose>
+    </model>
+    <model name="pallet_1500_01">
+          <include>
+              <uri>model://pallet_1500</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">19.114 7.1165 0.001 0 0 0</pose>
+    </model>
+    <model name="pallet_1500_02">
+          <include>
+              <uri>model://pallet_1500</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">19.114 8.6412 0.001 0 0 0</pose>
+    </model>
+    <model name="pallet_1500_03">
+          <include>
+              <uri>model://pallet_1500</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">19.114 10.022 0.001 0 0 0</pose>
+    </model>
+    <model name="pallet_01">
+          <include>
+              <uri>model://pallet</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">19.114 5.6904 0.001 0 0 0</pose>
+    </model>
+    <model name="quadro_01">
+          <include>
+              <uri>model://quadro</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">9.571 -0.87819 0.001 0 0 0</pose>
+    </model>
+    <model name="business_man_01">
+          <include>
+              <uri>model://business_man</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">11.121 -2.0866 0.001 0 0 0</pose>
+    </model>
+    <model name="man_walking_01">
+          <include>
+              <uri>model://man_walking</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">8.6311 4.8265 0.001 0 0 0</pose>
+    </model>
+    <model name="woman_walking_01">
+          <include>
+              <uri>model://woman_walking</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">12.032 7.7826 0.001 0 0 0</pose>
+    </model>
+    <model name="carrinho_01">
+          <include>
+              <uri>model://carrinho</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-17.569 11.329 0.001 0 0 0</pose>
+    </model>
+    <model name="carrinho_02">
+          <include>
+              <uri>model://carrinho</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-19.052 7.5234 0.001 0 0 0</pose>
+    </model>
+    <model name="tonel_01">
+          <include>
+              <uri>model://tonel</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-18.638 10.568 0.001 0 0 0</pose>
+    </model>
+    <model name="tonel_02">
+          <include>
+              <uri>model://tonel</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-18.01 9.8741 0.001 0 0 0</pose>
+    </model>
+    <model name="tonel_03">
+          <include>
+              <uri>model://tonel</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-19.076 9.5715 0.001 0 0 0</pose>
+    </model>
+    <model name="tonel_04">
+          <include>
+              <uri>model://tonel</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-18.002 9.031 0.001 0 0 0</pose>
+    </model>
+    <model name="tonel_05">
+          <include>
+              <uri>model://tonel</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-18.5 8.4173 0.001 0 0 0</pose>
+    </model>
+    <model name="esteira_01">
+          <include>
+              <uri>model://esteira</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-6.571 18.263 0.001 0 0 0</pose>
+    </model>
+    <model name="referencia_01">
+          <include>
+              <uri>model://referencia</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-6.5506 18.004 0.001 0 0 -1.581399</pose>
+    </model>
+    <model name="linhas_01">
+          <include>
+              <uri>model://linhas</uri>
+              <pose>0 0 0 0 0 0</pose>
+          </include>
+          <pose frame="">-6.5506 18.004 0.001 0 0 -1.581399</pose>
+    </model>
+  </world>
+</sdf>

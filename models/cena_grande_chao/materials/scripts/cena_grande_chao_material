@@ -1,0 +1,13 @@
+material cena_grande_chao/diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture size_texture_02.png
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+prepend-non-duplicate;GAZEBO_MODEL_PATH;share/drc_simulation/models
+prepend-non-duplicate;GAZEBO_MODEL_PATH;share/drc_simulation/worlds
+prepend-non-duplicate;GAZEBO_MODEL_PATH;share/drc_simulation/meshes
+prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share
+set-if-unset;MESA_GL_VERSION_OVERRIDE;3.3

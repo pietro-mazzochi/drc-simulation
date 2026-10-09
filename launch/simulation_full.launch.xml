@@ -1,0 +1,18 @@
+<launch>
+    <arg name="pause" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="world" default ="empty"/>
+
+    <include file="$(find-pkg-share drc_simulation)/launch/gazebo.launch.xml">
+        <arg name="pause" value="$(var pause)"/>
+        <arg name="gui" value="$(var gui)"/>
+        <arg name="use_sim_time" value="$(var use_sim_time)"/>
+        <arg name="world" value="$(var world)"/>
+    </include>
+    <include file="$(find-pkg-share drc_flexnav_bringup)/launch/joint_effort_controller.launch.xml"></include>
+    <include file="$(find-pkg-share base2joint_velocity_converter)/launch/joint_velocity_broadcaster_node.launch.xml"></include>
+    <include file="$(find-pkg-share base2joint_velocity_converter)/launch/velocity_converter_node.launch.xml"></include>
+    <!-- <include file="$(find-pkg-share digital_pid_controller)/launch/flexnav1500_pid_controller.launch.xml"></include> -->
+
+</launch>

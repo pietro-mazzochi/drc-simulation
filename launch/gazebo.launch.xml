@@ -1,0 +1,38 @@
+<launch>
+    <arg name="pause" default="false"/>
+    <arg name="gui" default="true"/>
+    <arg name="verbose" default="true"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="world" default="empty"/>
+    <arg name="robot" default="flexnav1500" />
+    <arg name="x" default="0.0"/>
+    <arg name="y" default="0.0"/>
+    <arg name="z" default="0.1"/>
+    <arg name="Y" default="3.14"/>
+    <arg name="lightweight" default="false"/>
+    <arg name="rear_lidar_sim" default="true"/>
+
+    <group>
+        <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py">
+            <arg name="pause" value="$(var pause)"/>
+            <arg name="gui" value="$(var gui)"/>
+            <arg name="verbose" value="$(var verbose)"/>
+            <arg name="use_sim_time" value="$(var use_sim_time)"/> 
+            <arg name="world" value="$(find-pkg-share drc_simulation)/worlds/$(var world).world"/>
+            <arg name="extra_gazebo_args" value="--ros-args --params-file $(find-pkg-share drc_flexnav_description)/config/gazebo.yaml"/>
+        </include>
+
+        <include file="$(find-pkg-share drc_flexnav_description)/launch/flexnav.launch.xml">
+            <arg name="robot" value="$(var robot)"/>
+            <arg name="ignition" value="false"/>
+            <arg name="lightweight" value="$(var lightweight)"/>
+            <arg name="rear_lidar_sim" value="$(var rear_lidar_sim)"/>
+            <arg name="use_sim_time" value="$(var use_sim_time)"/>
+        </include>
+    </group>
+
+    <node name="flexnav_spawner"
+          pkg="gazebo_ros"
+          exec="spawn_entity.py"
+          args="-topic robot_description -entity $(var robot) -x $(var x) -y $(var y) -z $(var z) -Y $(var Y)"/>
+</launch>
